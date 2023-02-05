@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;600&display=swap');
+
+
+body {
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
+    background: linear-gradient(113.49deg, #984D38 -30.3%, #181E41 58.12%) no-repeat;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.header {
+    max-width: 1197px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px 110px 15px;
+}
+
+.header__logo {
+    display: block;
+    width: 244px;
+    height: 32px;
+    background-image: url(../images/nav/logo.svg);
+    background-repeat: no-repeat;
+}
+
+.form {
+    position: relative;
+}
+
+/* значок поиска в форем ввода текста в хедере */
+.form__button {
+    position: absolute;
+    top: calc(50% - 10px);
+    /* середина по высоте (10 пикселей это половина высоты(20пискелей)) */
+    left: 10px;
+
+    display: block;
+    background-image: url(../images/InstagramLogo.svg);
+    width: 20px;
+    height: 20px;
+    /* что если бы картинка была больше? например 40х40 пикселей, как ее вписать в заданную область 20х20? */
+    background-repeat: no-repeat;
+    background-color: transparent;
+    /*прозрачность фона кнопки поиска */
+    border: none;
+}
+
+/*  форма ввода в хедере */
+.form__input {
+    width: 384px;
+    background: rgba(255, 255, 255, 0.1);
+    /* прозрачность в 10% */
+    border: none;
+    /* обнуление лишних стилей */
+    border-radius: 10px;
+    padding: 10px 40px;
+    color: #fff;
+}
+
+/* цвет текста в форме ввода */
+.form__input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form__input:focus {
+    outline: none;
+}
+
+.header__list {
+    display: flex;
+    list-style-type: none;
+    gap: 40px;
+}
+
+.header__link {
+    color: white;
+    text-decoration: none;
+}
+
+.header__link:hover {
+    background: linear-gradient(214.02deg, #B75CFF 6.04%, #671AE4 92.95%);
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 0 -20px;
+    /* это сделано чтобы при наведении кнопки не скакали в сторону из-за паддинга? */
+}
+
+.container {
+    max-width: 1050px;
+    margin: 0px auto;
+    padding: 0 15px 0 15px;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    margin-bottom: 80px;
+}
+
+.main__text {
+    flex-basis: 490px;
+}
+
+.main__title {
+    font-size: 67px;
+    font-weight: 600;
+    line-height: 110%;
+    margin-top: -3px;
+    margin-bottom: -4px;
+    margin-left: -3px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.main__description {
+    font-size: 22px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.5);
+    margin-left: -4px;
+    margin-bottom: 49px;
+    font-family: 'Work Sans', sans-serif;
+    text-transform: capitalize;
+    line-height: 160%;
+}
+
+.main__button {
+    position: relative;
+    font-size: 25px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    background: linear-gradient(214.02deg, #B75CFF 6.04%, #671AE4 92.95%);
+    padding: 10px 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+
+
+}
+
+.main__button:hover {
+    background: linear-gradient(214.02deg, #B75CFF 6.04%, #671AE4 92.95%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* добавляем градиент именно тексту в кнопке */
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-right: 18px;
+    border: 1px solid #eee;
+}
+
+.main__list {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    gap: 69px;
+    margin-top: 53px;
+}
+
+.main__item {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 28px;
+    margin-left: -3px;
+    font-weight: 700;
+    margin-top: -1px;
+}
+
+.main__span {
+    display: block;
+    /* превращаем спан в блок чтобы названия ушли вниз */
+    text-align: left;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 400;
+    margin-left: -1px;
+    font-family: 'Work Sans', sans-serif;
+    margin-top: 10px;
+}
+
+.img__content {
+    margin-bottom: 10px;
+    background-color: #3B3B3B;
+    border-bottom-right-radius: 20px;
+    padding-top: 31px;
+    padding-bottom: 46px;
+    margin-top: -5px;
+    padding-left: 20px;
+    border-bottom-left-radius: 20px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.main__img {
+    width: 100%;
+    margin-top: -6px;
+}
+
+.user__img {
+    position: relative;
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-left: 35px;
+}
+
+.avatar__0 {
+    position: absolute;
+    top: calc(50% - 12px);
+    left: -8%;
+    display: block;
+    background-image: url(../images/Avatar.png);
+    width: 24px;
+    height: 24px;
+}
+
+.title {
+    font-size: 38px;
+    font-weight: 700;
+    margin: 7px auto 4px;
+    text-align: center;
+    max-width: 442px;
+    line-height: 140%;
+}
+
+.desk {
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 7px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+.card__item {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, .25);
+    padding: 25px;
+    border-radius: 10px;
+    flex-basis: 32%;
+    box-sizing: border-box;
+    /* убрали влияние паддингов */
+}
+
+.card__item:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transition: 0.4s;
+}
+
+.card__cover {
+    position: relative;
+    overflow: hidden;
+    /* обрезка картинки */
+    width: 100%;
+    height: 395px;
+}
+
+.card__img {
+    width: 100%;
+    /* почему уменьшает ккартинку под контейнер ???? */
+    height: 395px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* последние 3 строки позиционируют рандомную картинку посередине при абс позиционировании от родителя */
+    object-fit: cover;
+    /*  сохранение пропорций */
+}
+
+.card__nick {
+    font-family: 'Work Sans', sans-serif;
+    Font-size: 22px;
+    font-weight: 600;
+    line-height: 140%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+
+}
+
+.card__autor {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    margin: 0 0 0 35px;
+}
+
+.icon_1 {
+    position: absolute;
+    top: calc(50% - 12px);
+    /* середина по высоте (10 пикселей это половина высоты(20пискелей)) */
+    left: -14%;
+
+    display: block;
+    background-image: url(../images/Asset1.png);
+    width: 24px;
+    height: 24px;
+}
+
+.icon_2 {
+    position: absolute;
+    top: calc(50% - 12px);
+    /* середина по высоте (10 пикселей это половина высоты(20пискелей)) */
+    left: -14%;
+
+    display: block;
+    background-image: url(../images/Asset2.png);
+    width: 24px;
+    height: 24px;
+}
+
+.icon_3 {
+    position: absolute;
+    top: calc(50% - 12px);
+    /* середина по высоте (10 пикселей это половина высоты(20пискелей)) */
+    left: -14%;
+
+    display: block;
+    background-image: url(../images/Asset3.png);
+    width: 24px;
+    height: 24px;
+}
+
+
+.collapsible {
+    background-color: transparent;
+    /* убираем фон */
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    padding: 18px 0;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #fff;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+}
+
+.active,
+.collapsible:hover {
+    background-color: transparent;
+    /* убираем фон */
+    color: rgba(255, 255, 255, 1);
+}
+
+.collapsible:after {
+    content: "\002B";
+    /* одбавляем "+" */
+    color: rgba(255, 255, 255, 0.5);
+    float: right;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.active:after {
+    /* при нажатии меняем "+" на "-" */
+    content: "\2212";
+    color: rgba(255, 255, 255, 1);
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    line-height: 1.5;
+}
+
+.faq {
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq__item {
+    flex-basis: 48%;
+}
+
+.banenr {
+    background: linear-gradient(214.02deg, #B75CFF 6.04%, #671AE4 92.95%);
+    border-radius: 10px;
+    padding: 60px 15px;
+    margin-top: 80px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.banner__title {
+    font-size: 50px;
+    font-weight: 700;
+    max-width: 500px;
+    margin: 0 auto 36px;
+}
+
+.banner__link {
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+@media(max-width: 1240px) {
+.header__list {
+    gap: 20px;
+}
+
+.form__input {
+    width: 260px;
+    font-size: 14px;
+}
+}
